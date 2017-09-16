@@ -6,11 +6,34 @@ body {
   color: #6772e5 !important;
 }
 
+.white-blue-slant {
+  height: 4rem;
+  background: #f6f9fc;
+  background: -webkit-linear-gradient(left top, white 50%, #f6f9fc 50%);
+  background: -o-linear-gradient(bottom right, white 50%, #f6f9fc 50%);
+  background: -moz-linear-gradient(bottom right, white 50%, #f6f9fc 50%);
+  background: linear-gradient(to bottom right, white 50%, #f6f9fc 50%);
+}
+
+.white-blue-slant-alt {
+  height: 2rem;
+  background: #f6f9fc;
+  background: -webkit-linear-gradient(right top, #f6f9fc 50%, #ffffff 50%);
+  background: -o-linear-gradient(bottom left, #f6f9fc 50%, #ffffff 50%);
+  background: -moz-linear-gradient(bottom left, #f6f9fc 50%, #ffffff 50%);
+  background: linear-gradient(to bottom left, #f6f9fc 50%, #ffffff 50%);
+}
+
 /*products*/
 .product {
   transition: all 0.2s ease;
   cursor: hand;
   cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.product .white {
+  height: 100%;
 }
 
 .product:hover {
