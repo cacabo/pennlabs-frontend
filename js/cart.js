@@ -56,9 +56,11 @@ $(document).ready(function() {
 
   $btn.click(function() {
     if ($cart.hasClass('show')) {
+      $btn.removeClass('show');
       $cart.removeClass('show').hide(200);
       $cart.css('color','white');
     } else {
+      $btn.addClass('show');
       $cart.addClass('show').show(200);
       setTimeout(function() {
         $($cart).css('color','black');
