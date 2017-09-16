@@ -2,17 +2,28 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.purple-text-hover:hover {
+  color: #6772e5 !important;
+}
+
 /*products*/
 .product {
   transition: all 0.2s ease;
+  cursor: hand;
+  cursor: pointer;
 }
 
 .product:hover {
   transform: translateY(-2px);
 }
 
-
 /*footer*/
 #footer {
   border-top: 1px solid #d7e3ef;
+}
+
+.vertical-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
 }
