@@ -25,7 +25,9 @@ const products = [
   },
 ];
 
-$(function() {
+const cart = [];
+
+function renderProducts() {
   let ans = '';
   products.forEach(function(product, index) {
     ans += `
@@ -42,4 +44,25 @@ $(function() {
     `;
   });
   $('#root').html(ans);
+}
+
+$(function() {
+  renderProducts();
+});
+
+$(document).ready(function() {
+  const $btn = $('#cart-button');
+  const $cart = $('#cart');
+
+  $btn.click(function() {
+    if ($cart.hasClass('show')) {
+      $cart.removeClass('show').hide(200);
+      $cart.css('color','white');
+    } else {
+      $cart.addClass('show').show(200);
+      setTimeout(function() {
+        $($cart).css('color','black');
+      }, 200);
+    }
+  });
 });
