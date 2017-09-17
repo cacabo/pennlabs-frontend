@@ -160,3 +160,12 @@ body {
   margin-left: 0;
   list-style: none;
 }
+
+/*forms*/
+.form-control {
+  width: auto;
+  display: inline;
+  border-radius: 0px;
+  border-width: 0px 0px 2px 0px;
+  padding-bottom: 2px;
+}
