@@ -2,6 +2,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.underline {
+  border-bottom: 4px solid #6772e5;
+}
+
 p.bigger {
   font-size: 1.2rem;
 }

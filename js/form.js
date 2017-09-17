@@ -19,7 +19,7 @@ $form.submit(function(e) {
 
     let ans = `
       <p class="bigger">
-        Hi ${name}! We've leveraged machine learning to match you with your Star Wars friend: ${res.name}. Have a good time.
+        Hi <span class="underline">${name}!</span> We've leveraged machine learning to match you with your Star Wars friend: <span class="underline">${res.name}.</span> Have a good time meeting your new pal!
       </p>
     `;
 
