@@ -1,4 +1,27 @@
 const $form = $('#form');
+const $name = $('#name');
+const $project = $('#project');
+const $email = $('#email');
+const $alt = $('#alt');
+const $button = $('#submit');
+
+$('.form-control').keypress(function() {
+  disable();
+});
+
+function disable() {
+  console.log('Called disable');
+  if (
+    $name.val().length &&
+    $project.val().length &&
+    $email.val().length &&
+    $alt.val().length
+  ) {
+    $button.removeClass('disabled');
+  } else {
+    $button.addClass('disabled');
+  }
+}
 
 $form.submit(function(e) {
   // Stop redirect

@@ -2,6 +2,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.disabled {
+  background: #a6a8bf !important;
+  cursor: not-allowed;
+}
+
 .underline {
   border-bottom: 4px solid #6772e5;
 }
