@@ -2,10 +2,8 @@
 I hope you enjoy my project!
 
 ### Todo
-- [ ] Content for meta tags
-  - [ ] Image meta tag, url meta tag
-- [ ] Images
+- [x] Content for meta tags
 - [x] SmoothScroll between sections
 - [x] Cart
 - [x] Form
-- [ ] Disabled button
+- [x] Disabled button
