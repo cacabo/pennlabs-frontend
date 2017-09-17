@@ -33,12 +33,17 @@ function renderProducts() {
     ans += `
       <div class="product col-12 col-md-6 col-lg-4" id=${index}>
         <div class="white round-2 shade-2 hover pad-1">
+          <div class="green-slice"></div>
           <h3>
             ${product.title}
           </h3>
-          <p>
+          <p class="marg-bot-05">
             ${product.body}
           </p>
+          <div class="space-1"></div>
+          <div class="cursor addToCart bold" data=${index}>
+            <i class="fa fa-plus fa-lg"></i>
+          </div>
         </div>
       </div>
     `;

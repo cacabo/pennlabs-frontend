@@ -91,6 +91,7 @@ body {
 
 .down:hover {
   transform: translateY(calc(-50% + -1.9rem));
+  background: #f9fcff;
 }
 
 .down .fa {
@@ -107,10 +108,39 @@ body {
 
 .product .white {
   height: 100%;
+  overflow: hidden !important;
+  background: transparent;
+  background: -webkit-linear-gradient(-80deg, #ffffff 70%, #f2f2ff 30%);
+  background: -o-linear-gradient(-80deg, #ffffff 70%, #f2f2ff 30%);
+  background: -moz-linear-gradient(-80deg, #ffffff 70%, #f2f2ff 30%);
+  background: linear-gradient(-80deg, #ffffff 70%, #f2f2ff 30%);
+}
+
+.product .white h3,
+.product .white p {
+  z-index: 200;
 }
 
 .product:hover {
   transform: translateY(-2px);
+}
+
+.addToCart {
+  position: absolute;
+  right: 2rem;
+  bottom: 0.75rem;
+  display: table;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.addToCart .fa {
+  color: #d7e2ef;
+  transition: all 0.2s ease;
+}
+
+.addToCart:hover .fa {
+  color: #8898aa;
 }
 
 /*footer*/
