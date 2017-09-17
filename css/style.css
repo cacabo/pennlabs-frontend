@@ -9,19 +9,92 @@ body {
 .white-blue-slant {
   height: 4rem;
   background: #f6f9fc;
-  background: -webkit-linear-gradient(left top, white 50%, #f6f9fc 50%);
-  background: -o-linear-gradient(bottom right, white 50%, #f6f9fc 50%);
-  background: -moz-linear-gradient(bottom right, white 50%, #f6f9fc 50%);
-  background: linear-gradient(to bottom right, white 50%, #f6f9fc 50%);
+  background: -webkit-linear-gradient(left top, transparent 50%, #f6f9fc 50%);
+  background: -o-linear-gradient(bottom right, transparent 50%, #f6f9fc 50%);
+  background: -moz-linear-gradient(bottom right, transparent 50%, #f6f9fc 50%);
+  background: linear-gradient(to bottom right, transparent 50%, #f6f9fc 50%);
 }
 
 .white-blue-slant-alt {
   height: 2rem;
   background: #f6f9fc;
-  background: -webkit-linear-gradient(right top, #f6f9fc 50%, #ffffff 50%);
-  background: -o-linear-gradient(bottom left, #f6f9fc 50%, #ffffff 50%);
-  background: -moz-linear-gradient(bottom left, #f6f9fc 50%, #ffffff 50%);
-  background: linear-gradient(to bottom left, #f6f9fc 50%, #ffffff 50%);
+  background: -webkit-linear-gradient(right top, #f6f9fc 50%, transparent 50%);
+  background: -o-linear-gradient(bottom left, #f6f9fc 50%, transparent 50%);
+  background: -moz-linear-gradient(bottom left, #f6f9fc 50%, transparent 50%);
+  background: linear-gradient(to bottom left, #f6f9fc 50%, transparent 50%);
+}
+
+.text-shade {
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slice-1 {
+  opacity: 0.2;
+  height: calc(100% + 4rem);
+  background: #3ef2c2;
+  background: -webkit-linear-gradient(110deg, #3ef2c2 60%, transparent 40%);
+  background: -o-linear-gradient(110deg, #3ef2c2 60%, transparent 40%);
+  background: -moz-linear-gradient(110deg, #3ef2c2 60%, transparent 40%);
+  background: linear-gradient(110deg, #3ef2c2 60%, transparent 40%);
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+
+.slice-2 {
+  opacity: 0.2;
+  height: calc(100% + 4rem);
+  background: #3ef2c2;
+  background: -webkit-linear-gradient(20deg, #4fedff 55%, transparent 45%);
+  background: -o-linear-gradient(20deg, #4fedff 55%, transparent 45%);
+  background: -moz-linear-gradient(20deg, #4fedff 55%, transparent 45%);
+  background: linear-gradient(20deg, #4fedff 55%, transparent 45%);
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.slice-4 {
+  opacity: 0.5;
+  height: calc(100% + 4rem);
+  background: #3ef2c2;
+  background: -webkit-linear-gradient(70deg, #1e56ff 50%, transparent 50%);
+  background: -o-linear-gradient(70deg, #1e56ff 50%, transparent 50%);
+  background: -moz-linear-gradient(70deg, #1e56ff 50%, transparent 50%);
+  background: linear-gradient(70deg, #1e56ff 50%, transparent 50%);
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+}
+
+.slice-5 {
+  opacity: 1;
+  position: absolute;
+  height: calc(100% + 4rem);
+  background: #6600ff;
+  background: -webkit-linear-gradient(50deg, #6600ff, #00ffff);
+  background: -o-linear-gradient(50deg, #6600ff, #00ffff);
+  background: -moz-linear-gradient(50deg, #6600ff, #00ffff);
+  background: linear-gradient(50deg, #6600ff, #00ffff);
+  z-index: -4;
+  width: 100%;
+}
+
+.down {
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(calc(-50% + -2rem));
+  left: calc(50% - 24px);
+}
+
+.down:hover {
+  transform: translateY(calc(-50% + -1.9rem));
+}
+
+.down .fa {
+  padding: 1rem;
 }
 
 /*products*/

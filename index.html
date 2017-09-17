@@ -87,13 +87,19 @@
     <!-- body -->
 
     <div id="intro">
+      <div class="slice-1"></div>
+      <div class="slice-2"></div>
+      <div class="slice-4"></div>
+      <div class="slice-5"></div>
+
       <div class="space-4"></div>
-      <div class="space-2"></div>
+      <div class="space-4"></div>
+      <div class="space-4 hidden-md-down"></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-10 col-lg-6 col-xl-5">
-            <h1>The new standard in software development</h1>
-            <p>
+            <h1 class="white-text text-shade">The new standard in software development</h1>
+            <p class="white-text text-shade">
               We make software to help improve student life on college campuses. We're built by students, for students.
             </p>
           </div>
@@ -103,6 +109,12 @@
     </div>
 
     <div class="white-blue-slant"></div>
+
+    <a data-scroll class="no-decoration" href="#products">
+      <div class="down shade-4 hover cursor">
+        <i class="fa fa-chevron-down blue-gray-text" aria-hidden="true"></i>
+      </div>
+    </a>
 
     <div class="white-blue" id="products">
       <div class="space-2"></div>
@@ -198,7 +210,7 @@
       smoothScroll.init({
         speed: 500,
         easing: 'easeInOutCubic',
-        offset: 62
+        offset: 54
       });
     </script>
   </body>
