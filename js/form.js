@@ -1,6 +1,4 @@
-let name = "";
 const $form = $('#form');
-const $content = $('#content');
 
 $form.submit(function(e) {
   // Stop redirect
@@ -17,6 +15,18 @@ $form.submit(function(e) {
     const name = $('#name').val();
 
     // Hide the form
-    $form.delay(200).slideUp(200);
+    $form.slideUp(200);
+
+    let ans = `
+      <p class="bigger">
+        Hi ${name}! We've leveraged machine learning to match you with your Star Wars friend: ${res.name}. Have a good time.
+      </p>
+    `;
+
+    console.log(ans);
+
+    const $content = $('#content');
+    $content.html(ans);
+    $content.delay(200).slideDown(200);
   });
 });
