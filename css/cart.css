@@ -17,6 +17,10 @@
   background: #6772e5;
 }
 
+#cart-button.show:hover {
+  background: #828bf2;
+}
+
 #cart-button:hover {
   box-shadow: 0px 0.125rem 0.625rem rgba(0, 10, 20, 0.3);
   transform: translateY(-2px);
@@ -38,7 +42,6 @@
   bottom: 6rem;
   right: 1.5rem;
   background: white;
-  padding: 1rem;
   display: none;
   box-shadow: 0px 0.25rem 0.75rem rgba(0, 10, 20, 0.2);
   border-radius: 1rem;
@@ -46,5 +49,28 @@
   color: white;
 }
 
-#cart:hover {
+#cart-content {
+  padding: 1rem;
+}
+
+.checkout {
+  color: white;
+  font-weight: bold;
+  background: #6772e5;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.checkout .fa {
+  transition: all 0.2s ease;
+}
+
+.checkout:hover {
+  background: #828bf2;
+}
+
+.checkout:hover .fa {
+  margin-left: 0.25rem;
 }
