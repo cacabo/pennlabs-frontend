@@ -27,6 +27,29 @@ const products = [
 
 const cart = [];
 
+function renderCart() {
+  const $content = $('#cart-content');
+
+  if (cart && cart.length > 0) {
+    let ans = '';
+    cart.forEach(function(item, index) {
+      ans += `
+        <div class="removeFromCart cursor" data="${index}">
+          <i class="fa fa-times"></i>
+        </div>
+        <h4>${item.title}</h4>
+        <p class="blue-gray-text">${item.body}</p>
+      `;
+      if (index !== cart.length - 1) {
+        ans += '<div class="line-1 light-line"></div>';
+      }
+    });
+    $content.html(ans);
+  } else {
+    $content.html('There are no items in your cart yet, explore our products and add some!');
+  }
+}
+
 function renderProducts() {
   let ans = '';
   products.forEach(function(product, index) {
@@ -51,10 +74,33 @@ function renderProducts() {
   $('#root').html(ans);
 }
 
+function clickListeners() {
+  const $add = $('.addToCart');
+  const $remove = $('.removeFromCart');
+
+  $add.click(function() {
+    const i = $(this).attr('data');
+    const obj = products.splice(i, 1);
+    cart.push(obj[0]);
+    renderCart();
+    renderProducts();
+    clickListeners();
+  });
+
+  $remove.click(function() {
+    const i = $(this).attr('data');
+    const obj = cart.splice(i, 1);
+    products.push(obj[0]);
+    renderCart();
+    renderProducts();
+    clickListeners();
+  });
+}
 
 // Render the products on page load
 $(function() {
   renderProducts();
+  clickListeners();
 });
 
 $(document).ready(function() {

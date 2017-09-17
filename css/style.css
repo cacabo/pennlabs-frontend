@@ -129,7 +129,6 @@ body {
   position: absolute;
   right: 2rem;
   bottom: 0.75rem;
-  display: table;
   border-radius: 50%;
   transition: all 0.2s ease;
 }
@@ -141,6 +140,10 @@ body {
 
 .addToCart:hover .fa {
   color: #8898aa;
+}
+
+#products {
+  min-height: 60vh;
 }
 
 /*footer*/

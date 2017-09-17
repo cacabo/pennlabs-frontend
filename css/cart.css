@@ -74,3 +74,20 @@
 .checkout:hover .fa {
   margin-left: 0.25rem;
 }
+
+.removeFromCart {
+  position: absolute;
+  right: 1rem;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: all 0.2s ease;
+}
+
+.removeFromCart .fa {
+  color: #d7e2ef;
+  transition: all 0.2s ease;
+}
+
+.removeFromCart:hover .fa {
+  color: #8898aa;
+}
