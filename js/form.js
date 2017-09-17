@@ -1,9 +1,9 @@
-const $form = $('#form');
-const $name = $('#name');
-const $project = $('#project');
-const $email = $('#email');
-const $alt = $('#alt');
-const $button = $('#submit');
+var $form = $('#form');
+var $name = $('#name');
+var $project = $('#project');
+var $email = $('#email');
+var $alt = $('#alt');
+var $button = $('#submit');
 
 $('.form-control').keypress(function() {
   disable();
@@ -28,19 +28,19 @@ $form.submit(function(e) {
   e.preventDefault();
 
   // Find a random number
-  const num = Math.floor(Math.random() * 51);
+  var num = Math.floor(Math.random() * 51);
 
   $.ajax({
     url: `https://swapi.co/api/people/${num}`,
   }).done(function(res) {
     console.dir(res.name);
     // Find the passed in name
-    const name = $('#name').val();
+    var name = $('#name').val();
 
     // Hide the form
     $form.slideUp(200);
 
-    let ans = `
+    var ans = `
       <p class="bigger">
         Hi <span class="underline">${name}!</span> We've leveraged machine learning to match you with your Star Wars friend: <span class="underline">${res.name}.</span> Have a good time meeting your new pal!
       </p>
@@ -48,7 +48,7 @@ $form.submit(function(e) {
 
     console.log(ans);
 
-    const $content = $('#content');
+    var $content = $('#content');
     $content.html(ans);
     $content.delay(200).slideDown(200);
   });

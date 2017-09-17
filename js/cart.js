@@ -1,4 +1,4 @@
-const products = [
+var products = [
   {
     "title": "Full-stack development",
     "body": "The full works",
@@ -25,15 +25,15 @@ const products = [
   },
 ];
 
-const cart = [];
+var cart = [];
 
-let count = 0;
+var count = 0;
 
 function renderCart() {
-  const $content = $('#cart-content');
+  var $content = $('#cart-content');
 
   if (cart && cart.length > 0) {
-    let ans = '';
+    var ans = '';
     cart.forEach(function(item, index) {
       ans += `
         <div class="removeFromCart cursor" data="${index}">
@@ -51,7 +51,7 @@ function renderCart() {
     $content.html('There are no items in your cart yet, explore our products and add some!');
   }
 
-  const $count = $('#count');
+  var $count = $('#count');
   $count.html('' + count);
   if (count == 0) {
     $count.hide(200);
@@ -61,7 +61,7 @@ function renderCart() {
 }
 
 function renderProducts() {
-  let ans = '';
+  var ans = '';
   products.forEach(function(product, index) {
     ans += `
       <div class="product col-12 col-md-6 col-lg-4" id=${index}>
@@ -84,12 +84,12 @@ function renderProducts() {
 }
 
 function clickListeners() {
-  const $add = $('.addToCart');
-  const $remove = $('.removeFromCart');
+  var $add = $('.addToCart');
+  var $remove = $('.removeFromCart');
 
   $add.click(function() {
-    const i = $(this).attr('data');
-    const obj = products.splice(i, 1);
+    var i = $(this).attr('data');
+    var obj = products.splice(i, 1);
     cart.push(obj[0]);
     count++;
     renderCart();
@@ -98,8 +98,8 @@ function clickListeners() {
   });
 
   $remove.click(function() {
-    const i = $(this).attr('data');
-    const obj = cart.splice(i, 1);
+    var i = $(this).attr('data');
+    var obj = cart.splice(i, 1);
     products.push(obj[0]);
     count--;
     renderCart();
@@ -115,9 +115,9 @@ $(function() {
 });
 
 $(document).ready(function() {
-  const $btn = $('#cart-button');
-  const $cart = $('#cart');
-  const $icon = $('#cart-button .fa');
+  var $btn = $('#cart-button');
+  var $cart = $('#cart');
+  var $icon = $('#cart-button .fa');
 
   $btn.click(function() {
     if ($cart.hasClass('show')) {
