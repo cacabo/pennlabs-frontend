@@ -5,6 +5,7 @@ I hope you enjoy my project!
 - [ ] Content for meta tags
   - [ ] Image meta tag, url meta tag
 - [ ] Images
-- [ ] SmoothScroll between sections
-- [ ] Cart
-- [ ] Form
+- [x] SmoothScroll between sections
+- [x] Cart
+- [x] Form
+- [ ] Disabled button
