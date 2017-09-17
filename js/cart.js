@@ -27,6 +27,8 @@ const products = [
 
 const cart = [];
 
+let count = 0;
+
 function renderCart() {
   const $content = $('#cart-content');
 
@@ -47,6 +49,14 @@ function renderCart() {
     $content.html(ans);
   } else {
     $content.html('There are no items in your cart yet, explore our products and add some!');
+  }
+
+  const $count = $('#count');
+  $count.html('' + count);
+  if (count == 0) {
+    $count.hide(200);
+  } else {
+    $count.show(200);
   }
 }
 
@@ -82,6 +92,7 @@ function clickListeners() {
     const i = $(this).attr('data');
     const obj = products.splice(i, 1);
     cart.push(obj[0]);
+    count++;
     renderCart();
     renderProducts();
     clickListeners();
@@ -91,6 +102,7 @@ function clickListeners() {
     const i = $(this).attr('data');
     const obj = cart.splice(i, 1);
     products.push(obj[0]);
+    count--;
     renderCart();
     renderProducts();
     clickListeners();

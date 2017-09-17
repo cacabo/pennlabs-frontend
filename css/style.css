@@ -133,6 +133,10 @@ body {
   transition: all 0.2s ease;
 }
 
+.display-none {
+  display: none !important;
+}
+
 .addToCart .fa {
   color: #d7e2ef;
   transition: all 0.2s ease;

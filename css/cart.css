@@ -91,3 +91,17 @@
 .removeFromCart:hover .fa {
   color: #8898aa;
 }
+
+#count {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  background: #FF587B;
+  height: 1.2rem;
+  width: 1.2rem;
+  z-index: 2000;
+  transform: translateY(-0.5rem);
+  font-size: 0.8rem;
+}
